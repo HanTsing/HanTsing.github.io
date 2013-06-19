@@ -22,9 +22,6 @@ body {
   text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-}
 
 h1 {
   margin-bottom: 1em;
@@ -81,7 +78,7 @@ ul.posts {
 .site {
   font-size: 110%;
   text-align: justify;
-  width: 40em;
+  width:  1168px;
   margin: 3em auto 2em auto;
   line-height: 1.5em;
 }
