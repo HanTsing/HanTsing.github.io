@@ -1,0 +1,25 @@
+*{ padding:0; margin:0; font-family:Arial, Helvetica, sans-serif; font-size:14px;}
+img{border:0;}
+body{ width:100%; overflow:hidden;}
+.content{ width:1168px; height:345px; margin:0 auto; background:#eeeeee; margin-top:60px;}
+h1{ font-size:60px; font-weight:bold; color:#323232;}
+.hello_text{ width:1048px; height:225px; padding:60px;}
+img{float:left; width:100px; height:127px;}
+p{float:left; width:548px; overflow:hidden; padding:10px ; font-size:18px; line-height:25px;}
+p a:link,p a:hover{ color:#770000; text-decoration:none;}
+p a:visited{text-decoration:underline;}
+.but{ width:518px;  height:30px; float:left; padding-left:10px; }
+.but_left{ width:4px; height:30px; float:left; background:url(images/li_bg1.jpg) no-repeat;}
+.but_center{ width:510px; height:28px; float:left; background:url(images/li_bg3.jpg) repeat-x; border-top:#b8b8b8 1px solid;border-bottom:#b8b8b8 1px solid; position:relative;  }
+.but_center a{  height:28px; line-height:28px; float:left;  padding:0 10px; border-right:#b8b8b8 1px solid;}
+.but_center a:link,.but_center a:visited{ color:#000; text-decoration:none;}
+.but_center a:hover{ background-color:#eee;}
+.but_center a .btn1{border-right:none;  }
+ .btn2{ width:13px;  height:13px; float:left; background:url({{ ASSET_PATH }}/images/glyphicons-halflings.png) no-repeat -20px -145px scroll transparent; margin-top:8px; margin-right:5px;}
+ .btn3{ width:13px;  height:13px; float:left; background:url(images/glyphicons-halflings.png) no-repeat -96px -145px scroll transparent; margin-top:8px; margin-right:10px;}
+ .btn4{ width:13px;  height:13px; float:left; background:url(images/glyphicons-halflings.png) no-repeat -168px 0  scroll transparent; margin-top:8px; margin-right:10px;}
+ .btn5{ width:13px;  height:13px; float:left; background:url(images/glyphicons-halflings.png) no-repeat -336px -97px scroll transparent; margin-top:8px; margin-right:10px;}
+ .btn1{ width:13px;  height:13px; float:left; background:url(images/glyphicons-halflings.png) no-repeat -336px -24px scroll transparent; margin-top:8px; margin-right:10px;}
+ .but  .nobg{border-right:#b8b8b8 0 solid; border-right-style:none;}
+.but_right{ width:4px; height:30px; float:left; background:url(images/li_bg2.jpg) no-repeat;}
+
