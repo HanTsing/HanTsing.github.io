@@ -10,22 +10,22 @@ tagline: Supporting tagline
        <h1>Hello there.</h1>
       <img src="/assets/themes/tom/images/beike_han.jpg">
       <p >
-        I'm HanTsing, Rails developer from Beijing, China.<br>
+        I'm Volker Rose, web developer from Bielefeld, Germany.<br>
         
         On this site I'm <a href="/blog/">blogging</a> (from time to time) on mostly nerdish topics.<br>
         You can find me also elsewhere on the web …
       </p>
         <div class="but">
-          <div class="but_left"></div>
+          <div class="but_left"> </div>
           <div class="but_center">
-          <a  href="http://twitter.com/hanqing07"><span class="btn2"></span> tweeting</a>
-          <a  href="#"><span class="btn3"></span> working</a>
-          <a  href="#"><span class="btn4"></span> profiling</a>
-          <a  href="https://github.com/HanTsing"><span class="btn5"></span>open sourcing</a>
+          <a href="#" ><span class="btn2"></span> tweeting</a>
+          <a href="#"  ><span class="btn3"></span> working</a>
+          <a  href="#" ><span class="btn4"></span> profiling</a>
+          <a  href="#"  ><span class="btn5"></span>open sourcing</a>
           <a  href="#"  class="nobg"> <span class="btn1"></span>listening</a>
         </div>
         <div class="but_right"></div>
         </div>
-  </div> 
-</div>    
+         </div> 
+   </div>    
 
