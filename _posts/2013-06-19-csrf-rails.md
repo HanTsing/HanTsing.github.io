@@ -110,12 +110,16 @@ Rails Session CookieStore 原理
 在rails后端调试下 session, 打印出来的结果是一个hash, 以hui800 为例, 先反向得到 session 数据, 用firebug可以看到
 hui800的cookie中有一个 _hui800_session, 如下:
 <pre><code>
-BAh7CkkiD3Nlc3Npb25faWQGOgZFRkkiJTY0MWJiZjMxMzVmYWRmMmY5NmM1ZGJkYzQwZGVjNmY3BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMTFTUXlPVklCR3hDVGprTXlUNXY0VGFXclUzWkVjN1crVi8zaFpiMWxyYWc9BjsARkkiB2N1BjsARkkiODE2NjM1MSxoYW5xaW5nd3hmMjAwOCxocXd4ZjE5ODVAMTYzLmNvbSwxMzQ2NjM1MDcxMgY7AFRJIhl3YXJkZW4udXNlci51c2VyLmtleQY7AFRbCEkiCVVzZXIGOwBGWwZpA8%2BJAkkiGXFmZjFLcEt4RW1PZWZLRy1Dal9VBjsAVEkiD3NpZ25pbl93YXkGOwBGaQY%3D--9c744261a50df432fb11c7e340db27629896da9e
+BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTM5MzhjMDFlYTA1NjljOGIwZWJjODhkMjZmYWM0ODQ4BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMXJ5OEVHb2pvMnhWZmdFaGpHeTNhRk5JQkZwRE5oOFpXekY5Ymo5WVNkVDg9BjsARg%3D%3D--7805882eaed11466c84bd490e829a1e2516013e9
 </code></pre>
 
-
-
-
+我们可以通过 Marshal.load Base64.decode64(data) 后会得到一个hash, 这个就是后端的 session数据
+<pre><code>
+pry(main)> Marshal.load Base64.decode64(s)
+ {"session_id"=>"3938c01ea0569c8b0ebc88d26fac4848",
+ "_csrf_token"=>"ry8EGojo2xVfgEhjGy3aFNIBFpDNh8ZWzF9bj9YSdT8="}
+</code></pre>
+这个'_csrf_token'就是rails生成的session值，因为rails的session cookiestore所以是存在浏览器的cookie中的
 
 Layout中也有一段<%= csrf_meta_tags %>是給JavaScript讀取驗證碼用的。
 但页面如果有缓存的话，我的做法会给cookie设置一个csrf token，ajax请求来读取cookie的值，然后加到请求参数中。
